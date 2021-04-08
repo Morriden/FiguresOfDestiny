@@ -24,6 +24,7 @@ console.log(props)
             onDragOver={dragOver}
         >
             { props.children }
+            Player
         </div>
     )
 }
