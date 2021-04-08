@@ -1,4 +1,5 @@
 import React from 'react'
+import BoardSquare from './BoardSquare'
 
 function Board (props) {
     const drop = e => {
@@ -16,6 +17,14 @@ function Board (props) {
 
     }
 
+    const grid = []
+    for(let row = 0; row < 4; row++) {
+        grid.push([])
+        for(let col = 0; col < 3; col ++) {
+            grid[row].push(<BoardSquare />)
+        }
+    }
+
     return (
         <div 
         id={props.id}
@@ -23,6 +32,7 @@ function Board (props) {
         onDrop={drop}
         onDragOver={dragOver}
         >
+            {grid}
             { props.children }
         </div>
     )
