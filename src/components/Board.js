@@ -1,21 +1,22 @@
 import React from 'react'
-import BoardSquare from './BoardSquare'
+import BoardSquare from './BoardSquare';
+import Card from './Card';
 
 function Board (props) {
-    const drop = e => {
-        e.preventDefault();
-        const card_id = e.dataTransfer.getData('card_id');
+    // const drop = e => {
+    //     e.preventDefault();
+    //     const card_id = e.dataTransfer.getData('card_id');
 
-        const card = document.getElementById(card_id);
-        card.style.display = 'block';
+    //     const card = document.getElementById(card_id);
+    //     card.style.display = 'block';
 
-        e.target.appendChild(card);
-    }
+    //     e.target.appendChild(card);
+    // }
 
-    const dragOver = e => {
-        e.preventDefault();
+    // const dragOver = e => {
+    //     e.preventDefault();
 
-    }
+    // }
 
     const grid = []
     for(let row = 0; row < 4; row++) {
@@ -27,13 +28,15 @@ function Board (props) {
 
     return (
         <div 
-        id={props.id}
+        // id={props.id}
         className={props.className}
-        onDrop={drop}
-        onDragOver={dragOver}
+        // onDrop={drop}
+        // onDragOver={dragOver}
         >
-            {grid}
+            { grid }
             { props.children }
+            <Card id="card-1" className="card" draggable="true">
+          </Card>
         </div>
     )
 }
