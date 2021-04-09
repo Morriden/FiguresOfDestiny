@@ -10,7 +10,10 @@ export default function CitySquare() {
     onDragOver={dragOver}
     >
         I'm a city
-        <Card id="card-1" className="card" draggable="true"></Card>
-       
+        <Card 
+            id="card-1" 
+            className="card" 
+            draggable="true">
+        </Card>
     </div>
 }
