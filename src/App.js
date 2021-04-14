@@ -1,14 +1,13 @@
 import React from 'react';
 import Board from './components/Board';
 // import Card from './components/Card';
-import BoardSquare from './components/BoardSquare';
 
 function App() {
   return (
     <div className="App">
       <main className="flexbox">
         <Board id="board-1" className="board">
-          <BoardSquare />
+          {/* <BoardSquare /> */}
           {/* <Card id="card-1" className="card" draggable="true">
           </Card> */}
         </Board>
